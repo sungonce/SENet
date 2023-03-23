@@ -1,6 +1,6 @@
 # Revisiting Self-Similarity: Structural Embedding for Image Retrieval 
 > Official Pytorch Implementation of the paper "**Revisiting Self-Similarity: Structural Embedding for Image Retrieval**"<br>
-> _accept to **CVPR 2023** <br>
+> accept to **CVPR 2023** <br>
 > by Seongwon Lee, Suhyeon Lee, Hongje Seong, and Euntai Kim<br>
 > Yonsei University
 > 
