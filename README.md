@@ -5,8 +5,6 @@
 > Yonsei University
 > 
 
-### Overall architecture
-
 <p align="middle">
     <img src="assets/lee2023senet.jpg">
 </p>
