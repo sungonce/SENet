@@ -47,7 +47,7 @@ class SENet(nn.Module):
         x2 = self.s2(x1)
         x3 = self.s3(x2)
         x4 = self.s4(x3)
-        x4 = self.SSM4(x4)
+        x4 = self.SSM(x4)
         x4_p = self.head.pool(x4)
         x4_p = x4_p.view(x4_p.size(0), -1)
         x = self.head.fc(x4_p)

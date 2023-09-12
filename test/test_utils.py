@@ -18,7 +18,7 @@ def extract_feature(model, data_dir, dataset, gnd_fn, split, scale_list):
         for im_list in tqdm(test_loader):
             for idx in range(len(im_list)):
                 im_list[idx] = im_list[idx].cuda()
-                desc = model.extract_global_descriptor(im_list[idx])
+                desc = model(im_list[idx])
                 if len(desc.shape) == 1:
                     desc.unsqueeze_(0)
                 desc = F.normalize(desc, p=2, dim=1)

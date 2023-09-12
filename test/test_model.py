@@ -11,7 +11,7 @@ def test_model(model, data_dir, dataset_list, scale_list):
     torch.backends.cudnn.benchmark = False
     model.eval()
     for dataset in dataset_list:
-        text = '>> {}: Global Retrieval for scale {} with CVNet-Global'.format(dataset, str(scale_list))
+        text = '>> {}: Global Retrieval for scale {} with SENet,'.format(dataset, str(scale_list))
         print(text)
         if dataset == 'roxford5k':
             gnd_fn = 'gnd_roxford5k.pkl'
@@ -35,7 +35,7 @@ def test_model(model, data_dir, dataset_list, scale_list):
         ks = [1, 5, 10]
         (mapE, apsE, mprE, prsE), (mapM, apsM, mprM, prsM), (mapH, apsH, mprH, prsH) = test_revisitop(cfg, ks, [ranks, ranks, ranks])
 
-        print('Retrieval results: mAP E: {}, M: {}, H: {}'.format(np.around(mapE*100, decimals=2), np.around(mapM*100, decimals=2), np.around(mapH*100, decimals=2)))
+        print('Retrieval results: mAP E: {}, M: {}, H: {}'.format(np.around(mapE*100, decimals=1), np.around(mapM*100, decimals=1), np.around(mapH*100, decimals=1)))
  
     torch.backends.cudnn.benchmark = True
 
